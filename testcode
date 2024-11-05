@@ -9,3 +9,13 @@ spec:
     storage: 1Gi
   hostPath:
     path: /tmp/data
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: testclaim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
